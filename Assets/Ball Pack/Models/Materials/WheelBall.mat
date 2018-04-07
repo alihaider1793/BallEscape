@@ -31,7 +31,7 @@ Material:
     - _EmissionLM: 0
     - _Shininess: 0.6158209
     m_Colors:
-    - _Color: {r: 0.8014706, g: 0.51420915, b: 0.25340614, a: 1}
+    - _Color: {r: 0.4852941, g: 0.4852941, b: 0.4852941, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1002 &2100001
 EditorExtensionImpl:

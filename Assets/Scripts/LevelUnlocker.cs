@@ -7,6 +7,7 @@ public class LevelUnlocker : MonoBehaviour {
 
     public GameObject[] levelButtons;
     public GameObject rateUsCanvas;
+    public Sprite lockImg;
 
     // Use this for initialization
     void Start()
@@ -65,7 +66,13 @@ public class LevelUnlocker : MonoBehaviour {
         {
             if (i > levelReached)
             {
+                levelButtons[i].GetComponent<Button>().image.sprite = lockImg;
+                levelButtons[i].GetComponentInChildren<Text>().text = "";
                 levelButtons[i].GetComponent<Button>().interactable = false;
+            }
+            else if (i < levelReached)
+            {
+                levelButtons[i].GetComponentInChildren<Text>().text = ""+(i+1);
             }
         }
     }
