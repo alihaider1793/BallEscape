@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class HoleDontKill : MonoBehaviour {
 
+    public AudioClip impact;
+    AudioSource audioSource;
+
     public Text timerText,bestTimeText;
     private float startTime;
     private float minn, secc;
@@ -13,6 +16,7 @@ public class HoleDontKill : MonoBehaviour {
     {
         startTime = Time.time;
         ShowBestTime();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -227,6 +231,8 @@ public class HoleDontKill : MonoBehaviour {
             }
             //if (PlayerPrefs.GetInt("levelFromLevelSelector").Equals(5))
             //    PlayerPrefs.SetInt("levelCleard", 5);
+            audioSource.PlayOneShot(impact, 0.7F);
+
             Destroy(other.gameObject);
             SceneManager.LoadScene("easyLevelSelection");
         }

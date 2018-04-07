@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour {
     Scene mScene;
     InterstitialAd interstitial;
     public GameObject gameOverPanel;
-
+    
     //private	void onCollisionEnter(Collision col)
     //{
     //	if (col.gameObject.name == "ball")
