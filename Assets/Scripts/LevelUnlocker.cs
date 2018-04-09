@@ -72,7 +72,14 @@ public class LevelUnlocker : MonoBehaviour {
             }
             else if (i < levelReached)
             {
-                levelButtons[i].GetComponentInChildren<Text>().text = ""+(i+1);
+                if (i <= 4)
+                    levelButtons[i].GetComponentInChildren<Text>().text = "" + (i + 1);
+                else if(i>4)
+                {
+                    int j = i % 5;
+                    j = j + 1;
+                    levelButtons[i].GetComponentInChildren<Text>().text = "" + j;
+                }
             }
         }
     }
